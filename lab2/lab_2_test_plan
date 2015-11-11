@@ -1,0 +1,72 @@
+// NOTE - class design needs to add a num_sides variable to Game
+
+Testing Plan
+Incremental testing - I would test each class as I added functionality and data. I would start with the Die Class, then LoadedDie, and finally work through Game class
+
+Die class
+
+Method  Arguments Expected outcome
+Die()   None      num_sides == 6
+Die()   -1        num_sides == 6
+Die()   6         num_sides == 6
+Die()   10        num_sides == 10
+
+Die::set_num_sides  // set_num_sides sets sides to 4 if passed a bad value; a die must have at least 4 sides
+set_num_sides
+        -1        num_sides == 4
+        4         num_sides == 4
+        10        num_sides == 10
+
+
+Die::roll() none  report_min_max()      always returns value between 1 and num_sides
+Die::roll() none  report_distribution   Should have even distribution over all possible values
+die::roll() none  report_average()      Should return a value close to the median value
+
+Note: report_min_max() would iterate large number of roll() calls (could easily do 100k+) and track min/max and report it
+report_distribution() would iterate large # of roll() calls and track the frequency of each value by incrementing a paralell array index (in which every element is initialized to zero)
+  The index would be the roll - 1. When reporting the distribution, we expect to see a similar number of results for all values over a large spread (so in 600 rolls on a 6 sided dice, roughly 100 each)
+  The method of systematically analyzing the distribution is left as an exercise for a more detailed test plan
+
+LoadedDie class
+LoadedDie()   None      num_sides == 6
+LoadedDie()   -1        num_sides == 6
+LoadedDie()   6         num_sides == 6
+LoadedDie()   10        num_sides == 10
+
+These tests essentially test the constructor in the same way we tested the Die Constructor.
+LoadedDie::roll() tests should use the same two functions, report_min_max and report_distribution as above.
+We expect different results though - min_max should still be between 1 and num_sides, but our distribution should indicate a shift towards the higher end
+Furthermore, a simpler test report_average() could be devised to simply confirm a higher average over a large number of .roll() calls
+Combined with the distribution/freqency information, we could decide of the loaded die is going to have a higehr value than the expected average
+
+LoadedDie::load_worked  int between 1 and num_sides for the test die  expect the load to return true at least some of the time
+Note: If it doesn't return true a perceptibly to the user or not is irrelevant. Specifications don't indicate how well the loaded die must work
+The probability it works is actually controlled by the value_weights data and load_die() method
+
+LoadedDie::load_die()   0   All weight_values will be 0
+load_die()              100 All weight_values will be 100 in the bottom two thirds of the range and 80 in the top top_third
+load_die()              50  Bottom two thirds will be 50 and top third will be 40
+
+
+Game
+
+Game()  constructor  No args  Can instantiate object and initalize all data members
+Note:: This will be implicitly tested during every test but must work to conduct further tests. The game will take no arguments
+in the current implementation design
+
+Next, test that you can prompt for the input from user and set the Game variables needed to properly initialize a new game
+
+method              Input       expected
+prompt_die_sides()  <4, 4, 10   re-rompts, accepts, and accepts
+prompt_num_rounds() <1, 1, 10   reprompt, accept, accepts
+prompt_if_loaded()  yes, yes    calls set_player_dice(0) and set_player_dice(1) and initalize both with loaded die
+
+set_player_dice
+set_number_rounds
+update_player_score
+start_new_game()
+
+play_round()
+check_winner()
+game_over()
+quit()
