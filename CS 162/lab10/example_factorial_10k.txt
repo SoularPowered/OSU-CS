@@ -1,0 +1,4 @@
+14:58:08. Click Time: 15(Start:	 rfactorial()) 
+14:58:08. Click Time: 15(End: 	 rfactorial()) 
+14:58:08. Click Time: 15(Call:	 factorial()) 
+14:58:08. Click Time: 15(End: 	 factorial()) 

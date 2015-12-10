@@ -1,0 +1,30 @@
+=======================================================
+Simulation 1
+Barbarian vs. Barbarian
+      Barbarian won:     44	Win Rate: 0%
+      Barbarian won:     56	Win Rate: 100%
+=======================================================
+=======================================================
+Simulation 2
+Barbarian vs. Blue Men
+      Barbarian won:      0	Win Rate: 0%
+       Blue Men won:    100	Win Rate: 100%
+=======================================================
+=======================================================
+Simulation 3
+Barbarian vs. Goblin
+      Barbarian won:     62	Win Rate: 0%
+         Goblin won:     38	Win Rate: 100%
+=======================================================
+=======================================================
+Simulation 4
+Barbarian vs. Reptile People
+      Barbarian won:      0	Win Rate: 0%
+ Reptile People won:    100	Win Rate: 100%
+=======================================================
+=======================================================
+Simulation 1
+Barbarian vs. Barbarian
+      Barbarian won:      2	Win Rate: 0%
+      Barbarian won:      3	Win Rate: 100%
+=======================================================

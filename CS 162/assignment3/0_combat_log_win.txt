@@ -1,0 +1,6 @@
+=======================================================
+Simulation 3
+Goblin vs. The Shadow
+         Goblin won:      0	Win Rate: 0%
+     The Shadow won:      3	Win Rate: 100%
+=======================================================
