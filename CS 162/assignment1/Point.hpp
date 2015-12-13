@@ -1,13 +1,13 @@
 /*********************************************************************
 ** Program Filename:	Point.hpp	[HEADER]
-** Author:				Shawn Hillyer
-** Date:				09/27/2015
-** Description:			Simple Point class with setters and getters
-**						to represent rows and columns. Note that this
-**						represents x as a row and y as a column (not
-**						(columns,rows) as in the Cartesian plane system)
-** Input:				None
-** Output:				None
+** Author:            Shawn Hillyer
+** Date:              09/27/2015
+** Description:       Simple Point class with setters and getters
+**                    to represent rows and columns. Note that this
+**                    represents x as a row and y as a column (not
+**                    (columns,rows) as in the Cartesian plane system)
+** Input:             None
+** Output:            None
 ********************************************************************/
 
 #ifndef SSHILLYER_POINT_HPP

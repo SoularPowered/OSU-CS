@@ -1,21 +1,21 @@
 /*********************************************************************
 ** Program Filename:	Point.cpp	[Implementation]
-** Author:				Shawn Hillyer
-** Date:				09/27/2015
-** Description:			Implementation of Point.hpp class methods
-** Input:				Accepts integers for x and y for the constructor
-**						or individually setting points.
-** Output:				A Point object or the int value of x_coord
-**						or y_coord
+** Author:            Shawn Hillyer
+** Date:              09/27/2015
+** Description:       Implementation of Point.hpp class methods
+** Input:             Accepts integers for x and y for the constructor
+**                    or individually setting points.
+** Output:            A Point object or the int value of x_coord
+**                    or y_coord
 ********************************************************************/
 
 #include "Point.hpp"
 
 
 /*********************************************************************
-** Function:			Point::Point()
-** Description:			Default Constructor
-** Parameters:			int, int - sets the x and y private data members
+** Function:        Point::Point()
+** Description:     Default Constructor
+** Parameters:      int, int - sets the x and y private data members
 ** Pre-Conditions:		Requires only the int values passed in
 ** Post-Conditions:		A Point object will have been instantiated
 ********************************************************************/
