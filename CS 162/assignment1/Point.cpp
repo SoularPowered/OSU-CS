@@ -13,11 +13,11 @@
 
 
 /*********************************************************************
-** Function:        Point::Point()
-** Description:     Default Constructor
-** Parameters:      int, int - sets the x and y private data members
-** Pre-Conditions:		Requires only the int values passed in
-** Post-Conditions:		A Point object will have been instantiated
+** Function:          Point::Point()
+** Description:       Default Constructor
+** Parameters:        int, int - sets the x and y private data members
+** Pre-Conditions:    Requires only the int values passed in
+** Post-Conditions:   A Point object will have been instantiated
 ********************************************************************/
 Point::Point(const int x, const int y)
 {
@@ -27,15 +27,15 @@ Point::Point(const int x, const int y)
 
 
 /*********************************************************************
-** Function:			Point::set_x_coord()
-** Description:			Updates the x_coord for the point. Validates
-**						the input is > 0 (in this grid system, negative
-**						values are outside the acceptable game world
-**						because each point is a point in an array, not
-**						a Cartesian plane)
-** Parameters:			int - validated and upates the x_coord
-** Pre-Conditions:		Point is instantiated or being instantiated
-** Post-Conditions:		x value will be updated
+** Function:        Point::set_x_coord()
+** Description:     Updates the x_coord for the point. Validates
+**                  the input is > 0 (in this grid system, negative
+**                  values are outside the acceptable game world
+**                  because each point is a point in an array, not
+**                  a Cartesian plane)
+** Parameters:      int - validated and upates the x_coord
+** Pre-Conditions:  Point is instantiated or being instantiated
+** Post-Conditions: x value will be updated
 ********************************************************************/
 void Point::set_x_coord(const int x)
 {
@@ -48,15 +48,15 @@ void Point::set_x_coord(const int x)
 
 
 /*********************************************************************
-** Function:			Point::set_y_coord()
-** Description:			Updates the y_coord for the point. Validates
-**						the input is > 0 (in this grid system, negative
-**						values are outside the acceptable game world
-**						because each point is a point in an array, not
-**						a Cartesian plane)
-** Parameters:			int - validated and upates the y_coord
-** Pre-Conditions:		Point is instantiated or being instantiated
-** Post-Conditions:		y value will be updated
+** Function:        Point::set_y_coord()
+** Description:     Updates the y_coord for the point. Validates
+**                  the input is > 0 (in this grid system, negative
+**                  values are outside the acceptable game world
+**                  because each point is a point in an array, not
+**                  a Cartesian plane)
+** Parameters:      int - validated and upates the y_coord
+** Pre-Conditions:  Point is instantiated or being instantiated
+** Post-Conditions: y value will be updated
 ********************************************************************/
 void Point::set_y_coord(const int y)
 {
@@ -70,11 +70,11 @@ void Point::set_y_coord(const int y)
 
 
 /*********************************************************************
-** Function:			Point::get_x_coord()
-** Description:			Returns the value in x_coord
-** Parameters:			None
-** Pre-Conditions:		Object must exist
-** Post-Conditions:		Returns x_coord
+** Function:         Point::get_x_coord()
+** Description:      Returns the value in x_coord
+** Parameters:			 None
+** Pre-Conditions:   Object must exist
+** Post-Conditions:  Returns x_coord
 ********************************************************************/
 int Point::get_x_coord() const
 {
@@ -83,11 +83,11 @@ int Point::get_x_coord() const
 
 
 /*********************************************************************
-** Function:			Point::get_y_coord()
-** Description:			Returns the value in y_coord
-** Parameters:			None
-** Pre-Conditions:		Object must exist
-** Post-Conditions:		Returns y_coord
+** Function:         Point::get_y_coord()
+** Description:      Returns the value in y_coord
+** Parameters:       None
+** Pre-Conditions:   Object must exist
+** Post-Conditions:  Returns y_coord
 ********************************************************************/
 int Point::get_y_coord() const
 {

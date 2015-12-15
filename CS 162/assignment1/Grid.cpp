@@ -1,24 +1,23 @@
 /*********************************************************************
-** Program Filename:	Grid.cpp	[Implementation]
-** Author:						Shawn Hillyer
-** Date:							09/25/2015
-** Description:			Implementation - represents a dynamic 2d grid
-**						with a viewable area with padding equal to half its height/width on edges
-** Input:				None
-** Output:				Able to print to a console current status
+** Program Filename:  Grid.cpp	[Implementation]
+** Author:            Shawn Hillyer
+** Date:              09/25/2015
+** Description:       Implementation - represents a dynamic 2d grid
+**                    with a viewable area with padding equal to half its height/width on edges
+** Input:             None
+** Output:            Able to print to a console current status
 ********************************************************************/
 #include "Grid.hpp"
 
 
 /*********************************************************************
-** Function:			Grid::Grid()
-** Description:			Constructor
-** Parameters:			rows_in: int, cols_in: int. The number of rows
-**						and columns
-** Pre-Conditions:		None. Default constructor also has default values
-** Post-Conditions:		Grid will be initialized with all cells set to
-**						DEAD and the # of rows/cols (within the limits
-**						defined below).
+** Function:         Grid::Grid()
+** Description:      Constructor
+** Parameters:       rows_in: int, cols_in: int.
+** Pre-Conditions:   None. Default constructor also has default values
+** Post-Conditions:  Grid will be initialized with all cells set to
+**                   DEAD and the # of rows/cols (within the limits
+**                   defined below).
 ********************************************************************/
 Grid::Grid(const int rows_in, const int cols_in)
 {
@@ -46,11 +45,11 @@ Grid::Grid(const int rows_in, const int cols_in)
 
 
 /*********************************************************************
-** Function:			Grid::~Grid()
-** Description:			Deconstructor to free resources
-** Parameters:			None allowed.
-** Pre-Conditions:		Object must be deleted or fall out of scope.
-** Post-Conditions:		All memory allocated for the cells[][] is freed.
+** Function:          Grid::~Grid()
+** Description:       Deconstructor to free resources
+** Parameters:        None allowed.
+** Pre-Conditions:    Object must be deleted or fall out of scope.
+** Post-Conditions:   All memory allocated for the cells[][] is freed.
 ********************************************************************/
 Grid::~Grid()
 {
@@ -63,11 +62,11 @@ Grid::~Grid()
 
 
 /*********************************************************************
-** Function:			Grid::initialize()
-** Description:			Function to set all cells to DEAD
-** Parameters:			None
-** Pre-Conditions:		OJbect must be instantiated.
-** Post-Conditions:		All values in cells[][] will be set to DEAD
+** Function:         Grid::initialize()
+** Description:      Function to set all cells to DEAD
+** Parameters:       None
+** Pre-Conditions:   Object must be instantiated.
+** Post-Conditions:	 All values in cells[][] will be set to DEAD
 ********************************************************************/
 void Grid::initialize()
 {
@@ -82,12 +81,12 @@ void Grid::initialize()
 
 
 /*********************************************************************
-** Function:			Grid::print_to_console()
-** Description:			Displays a grid to the console as series of chars
-** Parameters:			None
-** Pre-Conditions:		Grid must be instantiated.
-** Post-Conditions:		Console should display the Grid as represented
-**						by the characters defined inside.
+** Function:         Grid::print_to_console()
+** Description:      Displays a grid to the console as series of chars
+** Parameters:       None
+** Pre-Conditions:   Grid must be instantiated.
+** Post-Conditions:  Console should display the Grid as represented
+**                   by the characters defined inside.
 ********************************************************************/
 void Grid::print_to_console()
 {
@@ -122,12 +121,12 @@ void Grid::print_to_console()
 
 
 /*********************************************************************
-** Function:			Grid::count_neighbors()
-** Description:			Counts how many neighbors are alive
-** Parameters:			None
-** Pre-Conditions:		Grid must be instantiated.
-** Post-Conditions:		Console should display the Grid as represented
-**						by the characters defined inside.
+** Function:        Grid::count_neighbors()
+** Description:     Counts how many neighbors are alive
+** Parameters:      None
+** Pre-Conditions:  Grid must be instantiated.
+** Post-Conditions: Console should display the Grid as represented
+**                  by the characters defined inside.
 ********************************************************************/
 int Grid::count_neighbors(const int row, const int col)
 {
@@ -152,14 +151,14 @@ int Grid::count_neighbors(const int row, const int col)
 
 
 /*********************************************************************
-** Function:			Grid::is_alive(int row, int col)
-** Description:			Checks if a cell is alive or dead. IF cell is
-**						outside the array bounds then just assume its
-**						dead and return false.
-** Parameters:			None
-** Pre-Conditions:		Grid must be instantiated.
-** Post-Conditions:		Console should display the Grid as represented
-**						by the characters defined inside.
+** Function:         Grid::is_alive(int row, int col)
+** Description:      Checks if a cell is alive or dead. IF cell is
+**                   outside the array bounds then just assume its
+**                   dead and return false.
+** Parameters:       None
+** Pre-Conditions:   Grid must be instantiated.
+** Post-Conditions:  Console should display the Grid as represented
+**                   by the characters defined inside.
 ********************************************************************/
 bool Grid::is_alive(const int row, const int col)
 {
@@ -180,12 +179,12 @@ bool Grid::is_alive(const int row, const int col)
 
 
 /*********************************************************************
-** Function:			Grid::get_cell_status()
-** Description:			Returns the status of a cell.
-** Parameters:			row: int, col: int. Pass in the row and column
-**						to check
-** Pre-Conditions:		Grid must be instantiated and initialized
-** Post-Conditions:		Returns value of the cell (DEAD or ALIVE)
+** Function:         Grid::get_cell_status()
+** Description:      Returns the status of a cell.
+** Parameters:       row: int, col: int. Pass in the row and column
+**                   to check
+** Pre-Conditions:   Grid must be instantiated and initialized
+** Post-Conditions:  Returns value of the cell (DEAD or ALIVE)
 ********************************************************************/
 Cell Grid::get_cell_status(const int row, const int col) const
 {
@@ -194,13 +193,13 @@ Cell Grid::get_cell_status(const int row, const int col) const
 
 
 /*********************************************************************
-** Function:			Grid::set_cell_status()
-** Description:			Sets the status of a cell in this.cells[row][col];
-** Parameters:			row: int, col: int, new_status: Cell. Pass in the row and column
-**						to update and the new status.
-** Pre-Conditions:		Grid must be instantiated and initialized; row and col
-**						Must be within the pattern size
-** Post-Conditions:		The value of the cell will be updated to new_status
+** Function:         Grid::set_cell_status()
+** Description:      Sets the status of a cell in this.cells[row][col];
+** Parameters:       row: int, col: int, new_status: Cell. Pass in the row and column
+**                   to update and the new status.
+** Pre-Conditions:   Grid must be instantiated and initialized; row and col
+**                   Must be within the pattern size
+** Post-Conditions:  The value of the cell will be updated to new_status
 ********************************************************************/
 void Grid::set_cell_status(const int row, const int col, Cell new_status)
 {

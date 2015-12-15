@@ -2,33 +2,33 @@
 ** Program Filename:	GameOfLife.cpp	[Implementation]
 ** Author:						Shawn Hillyer
 ** Date:							09/27/2015
-** Description:			Class to represent Conway's Game of Life.
-**						Implemented as two Grid objects to represent
-**						the state of all cells and then update the next
-**						state grid before swapping the grid that each points
-**						to.
-** Input:				Will initialize with 40 rows and 80 columns.
-**						The rows and columns are passed into the Grid objects
-**						Also very boring unless a Pattern object is loaded using
-**						load_pattern() method.
-** Output:				Simulates the Game of Life autonomous cell game.
-**						Printing the results of each generation to the screen
-**						allows visual representation of what's happening.
-** TODO:				In future, find a way visualize graphically
-**						instead of console text.
+** Description:       Class to represent Conway's Game of Life.
+**                    Implemented as two Grid objects to represent
+**                    the state of all cells and then update the next
+**                    state grid before swapping the grid that each points
+**                    to.
+** Input:             Will initialize with 40 rows and 80 columns.
+**                    The rows and columns are passed into the Grid objects
+**                    Also very boring unless a Pattern object is loaded using
+**                    load_pattern() method.
+** Output:            Simulates the Game of Life autonomous cell game.
+**                    Printing the results of each generation to the screen
+**                    allows visual representation of what's happening.
+** TODO:              In future, find a way visualize graphically
+**                    instead of console text.
 ********************************************************************/
 #include "GameOfLife.hpp"
 
 
 /*********************************************************************
-** Function:			GameOfLife::GameOfLife()
-** Description:			Constructor
-** Parameters:			rows_in: int, cols_in: int. The number of rows
-**						and columns
-** Pre-Conditions:		None. Default constructor also has default values
-** Post-Conditions:		Grid will be initialized with all cells set to
-**						DEAD and the # of rows/cols (within the limits
-**						defined below).
+** Function:          GameOfLife::GameOfLife()
+** Description:       Constructor
+** Parameters:        rows_in: int, cols_in: int. The number of rows
+**                    and columns
+** Pre-Conditions:    None. Default constructor also has default values
+** Post-Conditions:   Grid will be initialized with all cells set to
+**                    DEAD and the # of rows/cols (within the limits
+**                    defined below).
 ********************************************************************/
 GameOfLife::GameOfLife(int rows_in, int cols_in)
 {
@@ -40,14 +40,14 @@ GameOfLife::GameOfLife(int rows_in, int cols_in)
 	current_generation = 0;
 }
 
-/*********************************************************************
-** Function:			GameOfLife::~GameOfLife()
-** Description:			Deconstructor
-** Parameters:			None allowed.
-** Pre-Conditions:		GameOfLife object must be deleted or fall out of scope
-** Post-Conditions:		Memory for each grid is deallocated
-********************************************************************/
 
+/*********************************************************************
+** Function:         GameOfLife::~GameOfLife()
+** Description:      Deconstructor
+** Parameters:       None allowed.
+** Pre-Conditions:   GameOfLife object must be deleted or fall out of scope
+** Post-Conditions:  Memory for each grid is deallocated
+********************************************************************/
 GameOfLife::~GameOfLife()
 {
 	delete current_state;
@@ -56,15 +56,15 @@ GameOfLife::~GameOfLife()
 
 
 /*********************************************************************
-** Function:			GameOfLife::tick()
-** Description:			Progresses to the next generation of cells and
-**						prints to the screen.
-** Parameters:			None.
-** Pre-Conditions:		Object must be instantiated
-** Post-Conditions:		Calling will display current board status,
-**						evaluate the board (updating next_state), and
-**						make then call a swap on current_ and next_state
-**						So that the next print will show the new status
+** Function:          GameOfLife::tick()
+** Description:       Progresses to the next generation of cells and
+**                    prints to the screen.
+** Parameters:        None.
+** Pre-Conditions:    Object must be instantiated
+** Post-Conditions:   Calling will display current board status,
+**                    evaluate the board (updating next_state), and
+**                    make then call a swap on current_ and next_state
+**                    So that the next print will show the new status
 ********************************************************************/
 void GameOfLife::tick()
 {
@@ -76,16 +76,16 @@ void GameOfLife::tick()
 
 
 /*********************************************************************
-** Function:			GameOfLife::run_rules()
-** Description:			Checks every cell of the curren_state and determines
-**						if it's dead or alive. Based on that, evaluates
-**						what its new status will be depending on the rules
-**						as specified in standard Conway's Game of Life
-** Parameters:			None.
-** Pre-Conditions:		Requires instantiated and initialized GameOfLIfe
-**						object. Essentially does nothing if all cells are dead
-** Post-Conditions:		current_state will not be changed, but next_state will
-**						copy every cell value from current_state
+** Function:          GameOfLife::run_rules()
+** Description:       hecks every cell of the curren_state and determines
+**                    if it's dead or alive. Based on that, evaluates
+**                    what its new status will be depending on the rules
+**                    as specified in standard Conway's Game of Life
+** Parameters:        None.
+** Pre-Conditions:    Requires instantiated and initialized GameOfLIfe
+**                    object. Essentially does nothing if all cells are dead
+** Post-Conditions:   current_state will not be changed, but next_state will
+**                    copy every cell value from current_state
 ********************************************************************/
 void GameOfLife::run_rules()
 {
@@ -146,13 +146,9 @@ void GameOfLife::run_rules()
 
 
 /*********************************************************************
-** Function:			GameOfLife::toggle_current_state()
-** Description:			Swaps current_state and next_state
-** Parameters:			None.
-** Pre-Conditions:		Requires instantiated and initialized GameOfLIfe
-**						object.
-** Post-Conditions:		current_state will point to the Grid array that
-						next_state pointed to and vice-versa
+** Function:        GameOfLife::toggle_current_state()
+** Description:	    Swaps current_state and next_state
+** Parameters:      None.
 ********************************************************************/
 void GameOfLife::toggle_current_state()
 {
@@ -163,17 +159,17 @@ void GameOfLife::toggle_current_state()
 
 
 /*********************************************************************
-** Function:			GameOfLife::display_to_console()
-** Description:			Print the current game status to the screen.
-**						Purpose is to abstract the way data is output.
-**						Calls the Grid member function display_to_console()
-**						so that other information can be modularly added or
-**						removed without impacting how grid displays to console
-** Parameters:			None.
-** Pre-Conditions:		Requires instantiated and initialized GameOfLIfe
-**						object.
-** Post-Conditions:		Screen will dispaly the Grid and whatever other
-**						pertinent information is deemed necessary.
+** Function:          GameOfLife::display_to_console()
+** Description:       Print the current game status to the screen.
+**                    Purpose is to abstract the way data is output.
+**                    Calls the Grid member function display_to_console()
+**                    so that other information can be modularly added or
+**                    removed without impacting how grid displays to console
+** Parameters:        None.
+** Pre-Conditions:    Requires instantiated and initialized GameOfLIfe
+**                    object.
+** Post-Conditions:   Screen will dispaly the Grid and whatever other
+**                    pertinent information is deemed necessary.
 ********************************************************************/
 void GameOfLife::display_to_console()
 {
@@ -186,15 +182,15 @@ void GameOfLife::display_to_console()
 
 
 /*********************************************************************
-** Function:			GameOfLife::load_pattern()
-** Description:			Loads a pattern object into both states. Initializes
-**						the board completely before doing so.
-** Parameters:			None.
-** Pre-Conditions:		Requires a valid Pattern object for the game board
-**						size.
-** Post-Conditions:		Game board will be initialized and then pattern
-**						will be loaded using the offset in data member
-**						'pattern_offset'. Current iteration also reset.
+** Function:          GameOfLife::load_pattern()
+** Description:       Loads a pattern object into both states. Initializes
+**                    the board completely before doing so.
+** Parameters:        None.
+** Pre-Conditions:    Requires a valid Pattern object for the game board
+**                    size.
+** Post-Conditions:   Game board will be initialized and then pattern
+**                    will be loaded using the offset in data member
+**                    'pattern_offset'. Current iteration also reset.
 ********************************************************************/
 void GameOfLife::load_pattern(const Pattern& pattern)
 {
@@ -216,9 +212,9 @@ void GameOfLife::load_pattern(const Pattern& pattern)
 
 
 /*********************************************************************
-** Function:			GameOfLife::set_pattern_offset
-** Description:			Sets the pattern offset given a point.
-** Parameters:			A Point representing the offset.
+** Function:          GameOfLife::set_pattern_offset
+** Description:       Sets the pattern offset given a point.
+** Parameters:        A Point representing the offset.
 ** Pre-Conditions:		Requires a valid Point; defaults to top left of visible
 ** Post-Conditions:		pattern_offset will have a valid Point within game board
 ********************************************************************/

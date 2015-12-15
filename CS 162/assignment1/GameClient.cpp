@@ -1,21 +1,21 @@
 /*********************************************************************
-** Program Filename:	GameOfLife.cpp	[Implementation]
-** Author:						Shawn Hillyer
-** Date:							09/27/2015
-** Description:			Class to represent Conway's Game of Life.
-**						Implemented as two Grid objects to represent
-**						the state of all cells and then update the next
-**						state grid before swapping the grid that each points
-**						to.
-** Input:				Will initialize with 40 rows and 80 columns.
-**						The rows and columns are passed into the Grid objects
-**						Also very boring unless a Pattern object is loaded using
-**						load_pattern() method.
-** Output:				Simulates the Game of Life autonomous cell game.
-**						Printing the results of each generation to the screen
-**						allows visual representation of what's happening.
-** TODO:				In future, find a way visualize graphically
-**						instead of console text.
+** Program Filename:  GameOfLife.cpp	[Implementation]
+** Author:            Shawn Hillyer
+** Date:              09/27/2015
+** Description:       Class to represent Conway's Game of Life.
+**                    Implemented as two Grid objects to represent
+**                    the state of all cells and then update the next
+**                    state grid before swapping the grid that each points
+**                    to.
+** Input:             Will initialize with 40 rows and 80 columns.
+**                    The rows and columns are passed into the Grid objects
+**                    Also very boring unless a Pattern object is loaded using
+**                    load_pattern() method.
+** Output:            Simulates the Game of Life autonomous cell game.
+**                    Printing the results of each generation to the screen
+**                    allows visual representation of what's happening.
+** TODO:              In future, find a way visualize graphically
+**                    instead of console text.
 ********************************************************************/
 #include "GameOfLife.hpp"
 #include <stdlib.h>
@@ -39,8 +39,8 @@ Pattern make_glider_cannon();
 
 
 /*********************************************************************
-** Function:			main()
-** Description:			Game / entry point for program
+** Function:        main()
+** Description:     Game / entry point for program
 ** Parameters:			None
 ** Pre-Conditions:		None
 ** Post-Conditions:		Gets and validates user input and displays

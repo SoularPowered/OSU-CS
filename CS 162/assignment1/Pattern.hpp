@@ -1,17 +1,17 @@
 /*********************************************************************
 ** Program Filename:	Pattern.hpp		[HEADER]
-** Author:				Shawn Hillyer
-** Date:				09/27/2015
-** Description:			Data structure that represents points on a Grid
-**						as a series of 1 or more Point objects. Can be
-**						initialized using an external ascii text file
-**						with the pattern written as lines of .'s and O's
-**						or manually passing a series of points representing
-**						the pattern.
-** Input:				See constructors - file or array of Points and
-**						the number of points in the array
-** Output:				Instantiated Pattern which can be used by the
-**						Game of Life and represented using a Grid object
+** Author:            Shawn Hillyer
+** Date:              09/27/2015
+** Description:       Data structure that represents points on a Grid
+**                    as a series of 1 or more Point objects. Can be
+**                    initialized using an external ascii text file
+**                    with the pattern written as lines of .'s and O's
+**                    or manually passing a series of points representing
+**                    the pattern.
+** Input:             See constructors - file or array of Points and
+**                    the number of points in the array
+** Output:            Instantiated Pattern which can be used by the
+**                    Game of Life and represented using a Grid object
 ********************************************************************/
 
 #ifndef SSHILLYER_PATTERN_HPP

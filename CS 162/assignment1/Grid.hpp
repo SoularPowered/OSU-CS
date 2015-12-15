@@ -1,11 +1,11 @@
 /*********************************************************************
 ** Program Filename:	Grid.hpp		[HEADER]
-** Author:						Shawn Hillyer
-** Date:							09/27/2015
-** Description:			Header- represents a dynamic 2d grid with a
-**						to be used in the Game of Life. Each cell
-** Input:				None
-** Output:			Able to print to a console current status
+** Author:            Shawn Hillyer
+** Date:              09/25/2015
+** Description:       Implementation - represents a dynamic 2d grid
+**                    with a viewable area with padding equal to half its height/width on edges
+** Input:             None
+** Output:            Able to print to a console current status
 ********************************************************************/
 
 #ifndef SSHILLYER_GRID_HPP
